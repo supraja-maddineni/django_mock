@@ -1,0 +1,28 @@
+{% extends "app/dummy.html" %}
+
+{% block title %}
+  <title>answere list</title>
+{% endblock %}
+
+
+{% block body_block %}
+<center>
+
+  <h1>Your Question:</h1>
+  <h1> {{qobj.question}}</h1>
+    <hr>
+    <a href="{% url 'answering'%}" class="btn btn-light">click to answere the question</a>
+    <hr>
+  <div>
+   
+  <h1>Answeres</h1>
+
+
+{% for a in qobj.questions.all %}
+    <h1>Username:{{a.username}}</h1>
+    <h1>Answeres:{{a.answere}}</h1>
+{% endfor %}
+</div>
+
+  </center>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "app/dummy.html" %}
+{% block title %}
+<title>questions</title>
+{% endblock %}
+{% block body_block %}
+<center>
+    <h1>questions</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="qu">Raise question</label>
+        <input type="text" name="qu" id="qu"><br><br>
+        <input type="submit" value="post a question">
+        <hr>
+        <a href="{% url 'answering' %}" class="btn btn-primary">click to answere quesions</a>
+            
+    </form>
+</center>
+
+{% endblock %}

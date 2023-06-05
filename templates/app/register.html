@@ -1,0 +1,18 @@
+{% extends 'app/dummy.html' %}
+{% block title %}
+    <title>register</title>
+    {% endblock %}
+
+{% block body_block %}
+  
+    <center>
+        <h1>register</h1>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{UF.as_p}}
+            <input type="submit" value="register">
+        </form>
+   
+    </center>
+{% endblock %}
